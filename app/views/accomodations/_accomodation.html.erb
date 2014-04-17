@@ -1,0 +1,7 @@
+<ul class="accomodations-ul">
+   <li class="accomodations-li accomodations-header"><%= link_to accomodation.location, accomodation_path(accomodation.id) %></li>
+    <ul>
+      <li class="accomodations-li"><%= accomodation.description %></li>
+      <li class="accomodations-li"><%= accomodation.price %></li>
+    </ul>
+</ul>

@@ -1,0 +1,15 @@
+<h1>Reserve Today! </h1>
+<ul class="accomodations-ul">
+  <% @accomodations.each do |accomodation| %>
+    <li class="accomodations-li"><%= link_to accomodation.location, accomodation_path(accomodation.id) %></li>
+    <div>
+    <ul class="accomodations-ul">
+      <li class="accomodations-li"><%= accomodation.description %></li>
+      <li class="accomodations-li"><%= accomodation.price %></li>
+      <li class="accomodations-li"><%= accomodation.rooms %></li>
+    </ul>
+    </div>
+  <% end %>
+</ul>
+
+

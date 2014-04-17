@@ -1,0 +1,15 @@
+<div class="accomodation-show">
+  <h3>Location</h3>
+  <%= @accomodation.location %>
+  <h3>Description</h3>
+  <%= @accomodation.description %>
+  <h3>Price</h3>
+  <%= @accomodation.price %>
+  <h3>Rooms</h3>
+  <%= @accomodation.rooms %>
+  <h3>Cancellation Fee</h3>
+  <%= @accomodation.cancellation_fee %><br>
+
+  <%= link_to "Book this room", new_booking_path %></br>
+  <%= link_to "Back", :back %>
+</div>

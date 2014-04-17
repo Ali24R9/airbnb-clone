@@ -1,0 +1,3 @@
+<% if @accomodation.save? %>
+  $('.accomodations-list').prepend('<%= j render(@accomodation) %>');
+<% end %>

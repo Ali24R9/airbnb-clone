@@ -1,0 +1,27 @@
+<%= form_for @accomodation do |f| %>
+  <% if @accomodation.errors.any? %>
+      <div class="error_messages">
+        <h2 class="error">Form is invaid</h2>
+        <ul>
+          <% @accomodation.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <div class="form-group"><%= f.label :location %><br />
+  <%= f.text_field :location, autofocus: true %></div>
+
+  <div class="form-group"><%= f.label :description %><br />
+  <%= f.text_field :description, autofocus: true %></div>
+
+  <div class="form-group"><%= f.label :price %><br />
+    <%= f.text_field :price %></div>
+  <div class="form-group"><%= f.label :rooms %><br />
+    <%= f.text_field :rooms%></div>
+
+  <div class="form-group"><%= f.label :cancellation_fee %><br />
+    <%= f.text_field :cancellation_fee %></div>
+
+  <div><%= f.submit "Post Listing", :class => "btn btn-default" %></div>
+<% end %>

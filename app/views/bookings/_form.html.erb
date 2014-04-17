@@ -1,0 +1,19 @@
+<%= form_for @booking do |f| %>
+  <% if @booking.errors.any? %>
+      <div class="error_messages">
+        <h2 class="error">Form is invaid</h2>
+        <ul>
+          <% @booking.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <div class="form-group"><%= f.label :check_in %><br />
+  <%= f.text_field :check_in, autofocus: true %></div>
+
+  <div class="form-group"><%= f.label :check_out %><br />
+  <%= f.text_field :check_out, autofocus: true %></div>
+
+  <div><%= f.submit "Book it now!", :class => "btn btn-default" %></div>
+<% end %>
